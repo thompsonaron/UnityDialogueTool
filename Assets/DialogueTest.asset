@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfc908d25c8ac64fbc04e565c582142, type: 3}
+  m_Name: DialogueTest
+  m_EditorClassIdentifier: 
+  dialogues2:
+  - title: GreetingsDialogue
+    mainText: Hello! How are you today?
+    options:
+    - text: "\_Hi,\_I'm ok"
+      dialogueToJumpTo: NeutralDialogue
+      arg:
+        print: 
+    - text: ' What are you looking at? '
+      dialogueToJumpTo: AggressiveDialogue
+      arg:
+        print: HelloDone
+  - title: AggressiveDialogue
+    mainText: Humph, go away
+    options: []
+  - title: NeutralDialogue
+    mainText: Good to hear!
+    options:
+    - text: ' Ok, see you '
+      dialogueToJumpTo: GreetingsDialogue
+      arg:
+        print: HelloDone
+  firstKey: GreetingsDialogue

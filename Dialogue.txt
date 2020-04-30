@@ -1,0 +1,14 @@
+#GreetingsDialogue
+  Hello! How are you today?
+  - Hi, I'm ok
+    :NeutralDialogue
+  - What are you looking at? {print(HelloDone)}
+    :AggressiveDialogue
+$
+#AggressiveDialogue
+  Humph, go away
+$
+#NeutralDialogue
+  Good to hear!
+    - Ok, see you {print(HelloDone)}
+$
